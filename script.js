@@ -18,33 +18,35 @@ function checkDood() {
     if (honger <= 0 || slapen <= 0 || spelen <= 0) {
         disableButtons();
         normalerat.src = "images/dead.png";
-        normalerat.style.width = "400px"; // Breedte van "dead.png"
-        console.log("moet dood");
+        normalerat.style.width = "400px"; 
+       
     } else if (honger === 5) {
         normalerat.src = "images/honger.png";
-        normalerat.style.width = "900px"; // Breedte van de andere afbeeldingen
+        normalerat.style.width = "900px"; 
      
     } else if (slapen === 5) {
         normalerat.src = "images/slapen.png";
-        normalerat.style.width = "900px"; // Breedte van de andere afbeeldingen
+        normalerat.style.width = "900px"; 
        
     } else if (spelen === 5) {
         normalerat.src = "images/spelen.png";
-        normalerat.style.width = "900px"; // Breedte van de andere afbeeldingen
+        normalerat.style.width = "900px"; 
       
     } else {
         normalerat.src = "images/rat.png";
-        normalerat.style.width = "900px"; // Breedte van de andere afbeeldingen
+        normalerat.style.width = "900px"; 
         
     }
 }
+
+/* Alle plaatjes, gemaakt via canva, gameboy, kaas, rip & bedje van iconenbibliotheek canva */
+
 
 
 
 function etenomlaag() {
     honger = Math.max(0, honger - 1);
     voerpunt.textContent = honger;
-    console.log(honger);
     checkDood();
 }
 
